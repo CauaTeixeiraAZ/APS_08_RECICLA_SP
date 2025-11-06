@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">PontosDeColeta</string>
+    <string name="mapicon">mapIcon</string>
+    <string name="editar">Editar</string>
+    <string name="deletar">Deletar</string>
+    <string name="nome_do_ponto">Nome do Ponto</string>
+    <string name="endere_o">Endereço</string>
+    <string name="materiais">Materiais</string>
+    <string name="sugerir_novo_ponto">Sugerir novo ponto</string>
+    <string name="minha_localiza_o">Minha localização</string>
+    <string name="eletr_nicos">Eletrônicos</string>
+    <string name="metal">Metal</string>
+    <string name="vidro">Vidro</string>
+    <string name="papel">Papel</string>
+    <string name="pl_stico">Plástico</string>
+    <string name="todos">Todos</string>
+    <string name="painel_admin">Painel Admin</string>
+    <string name="pontos_de_coleta">Pontos de Coleta</string>
+    <string name="reciclagem_consciente">Reciclagem consciente</string>
+    <string name="painel_administrativo">Painel Administrativo</string>
+    <string name="nenhum_ponto_pendente">Nenhum ponto pendente</string>
+    <string name="rejeitar">Rejeitar</string>
+    <string name="validar">Validar</string>
+    <string name="cadastrar_ponto_de_coleta">Cadastrar Ponto de Coleta</string>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "734961091945",
+    "project_id": "pontoscoleta",
+    "storage_bucket": "pontoscoleta.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:734961091945:android:2e39c5c1eb6f608c3629f8",
+        "android_client_info": {
+          "package_name": "com.unip.CC8P33.PontosDeColeta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRBi7qIhkoNUL35jYOI1-qMlXIdnMXyGc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
