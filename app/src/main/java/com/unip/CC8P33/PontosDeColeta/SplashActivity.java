@@ -1,4 +1,4 @@
-package com.unip.CC8P33.PontosDeColeta.ui;
+package com.unip.CC8P33.PontosDeColeta;
 
 
 import android.annotation.SuppressLint;
@@ -8,7 +8,6 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.unip.CC8P33.PontosDeColeta.R;
 import com.unip.CC8P33.PontosDeColeta.ui.auth.LoginActivity;
 import com.unip.CC8P33.PontosDeColeta.ui.cidadao.MapaCidadaoActivity;
 import com.unip.CC8P33.PontosDeColeta.utils.FirebaseConfig;

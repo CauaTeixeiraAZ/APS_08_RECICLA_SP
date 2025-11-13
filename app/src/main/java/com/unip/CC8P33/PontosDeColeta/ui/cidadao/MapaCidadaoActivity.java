@@ -42,6 +42,7 @@ import com.unip.CC8P33.PontosDeColeta.model.Usuario;
 import com.unip.CC8P33.PontosDeColeta.repository.PontoColetaRepository;
 import com.unip.CC8P33.PontosDeColeta.ui.admin.AdminPanelActivity;
 import com.unip.CC8P33.PontosDeColeta.ui.auth.LoginActivity;
+import com.unip.CC8P33.PontosDeColeta.utils.PopularDadosHelper;
 import com.unip.CC8P33.PontosDeColeta.utils.UserSession;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -96,6 +97,8 @@ public class MapaCidadaoActivity extends AppCompatActivity
         configurarPesquisa();
         configurarFiltros();
         configurarFABs();
+
+        //PopularDadosHelper.gerarPontosEmSaoPaulo(this);
 
         // Carregar dados do usuário
         carregarDadosUsuario();

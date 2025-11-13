@@ -13,8 +13,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+        android:theme="@style/Theme.PontosDeColeta"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
 
+        <!-- SplashActivity -->
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -25,15 +28,20 @@
             </intent-filter>
         </activity>
 
+        <!-- MapaCidadaoActivity -->
+        <activity
+            android:name=".ui.cidadao.MapaCidadaoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PontosDeColeta" />
+
+
         <activity
             android:name=".ui.cidadao.DetalhesPontoActivity"
             android:exported="false" />
         <activity
             android:name=".ui.cidadao.CadastrarPontoActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.cidadao.MapaCidadaoActivity"
-            android:exported="false" />
+
         <activity
             android:name=".ui.auth.RegistroActivity"
             android:exported="false" />
@@ -48,16 +56,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAYPxLJMubUCQbm7udi3sjIw2SQqij6RyU" />
-
-        <activity
-            android:name=".ui.SplashActivity"
-            android:exported="true"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
         <activity
             android:name=".MainActivity"
