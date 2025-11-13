@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">PontosDeColeta</string>
     <string name="mapicon">mapIcon</string>
     <string name="editar">Editar</string>
     <string name="deletar">Deletar</string>
@@ -22,4 +21,7 @@
     <string name="rejeitar">Rejeitar</string>
     <string name="validar">Validar</string>
     <string name="cadastrar_ponto_de_coleta">Cadastrar Ponto de Coleta</string>
+    <string name="app_name">Pontos de Coleta</string>
+    <string name="navigation_drawer_open">Abrir menu</string>
+    <string name="navigation_drawer_close">Fechar menu</string>
 </resources>

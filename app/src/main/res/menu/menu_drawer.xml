@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_mapa"
+            android:icon="@android:drawable/ic_dialog_map"
+            android:title="Mapa"/>
+
+        <item
+            android:id="@+id/nav_admin"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="Painel Administrativo"
+            android:visible="false"/>
+
+    </group>
+
+    <item android:title="Conta">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@android:drawable/ic_lock_power_off"
+                android:title="Sair"/>
+        </menu>
+    </item>
+
+</menu>

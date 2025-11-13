@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F5F5F5">
+    android:background="@color/gray_light">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,22 +15,25 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/cadastrar_ponto_de_coleta"
+            android:text="Cadastrar Ponto de Coleta"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="#2E7D32"
+            android:textColor="@color/green_dark"
             android:layout_marginBottom="24dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nome do local"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/CustomTextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etNome"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:padding="16dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -38,18 +41,20 @@
             android:layout_height="wrap_content"
             android:hint="Endereço completo"
             android:layout_marginTop="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/CustomTextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etEndereco"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:padding="16dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:baselineAligned="false"
             android:orientation="horizontal"
             android:layout_marginTop="16dp">
 
@@ -59,13 +64,16 @@
                 android:layout_weight="1"
                 android:hint="Latitude"
                 android:layout_marginEnd="8dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/CustomTextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etLatitude"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal|numberSigned"/>
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:padding="16dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -74,13 +82,16 @@
                 android:layout_weight="1"
                 android:hint="Longitude"
                 android:layout_marginStart="8dp"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                style="@style/CustomTextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etLongitude"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="numberDecimal|numberSigned"/>
+                    android:inputType="numberDecimal|numberSigned"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp"
+                    android:padding="16dp"/>
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -91,7 +102,7 @@
             android:layout_height="wrap_content"
             android:text="Usar minha localização atual"
             android:layout_marginTop="8dp"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            style="@style/CustomButtonOutlined"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,6 +110,7 @@
             android:text="Tipos de materiais aceitos:"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:textColor="@color/text_primary"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="8dp"/>
 
@@ -106,50 +118,80 @@
             android:id="@+id/cbPlastico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Plástico"/>
+            android:text="Plástico"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
 
         <CheckBox
             android:id="@+id/cbPapel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Papel"/>
+            android:text="Papel"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
 
         <CheckBox
             android:id="@+id/cbVidro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Vidro"/>
+            android:text="Vidro"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
 
         <CheckBox
             android:id="@+id/cbMetal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Metal"/>
+            android:text="Metal"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
 
         <CheckBox
             android:id="@+id/cbEletronicos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Eletrônicos"/>
+            android:text="Eletrônicos"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
 
         <CheckBox
             android:id="@+id/cbOrganico"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Orgânico"/>
+            android:text="Orgânico"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
+
+        <CheckBox
+            android:id="@+id/cbMadeira"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Madeira"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Telefone (opcional)"
             android:layout_marginTop="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/CustomTextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etTelefone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="phone"/>
+                android:inputType="phone"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:padding="16dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -157,22 +199,25 @@
             android:layout_height="wrap_content"
             android:hint="Horário de funcionamento"
             android:layout_marginTop="16dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            style="@style/CustomTextInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etHorario"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:padding="16dp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCadastrar"
+            style="@style/CustomButton"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Cadastrar Ponto"
             android:textSize="16sp"
-            android:layout_marginTop="24dp"
-            app:cornerRadius="8dp"/>
+            android:layout_marginTop="24dp"/>
 
         <ProgressBar
             android:id="@+id/progressBar"
@@ -180,7 +225,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:indeterminateTint="@color/green_primary"/>
 
     </LinearLayout>
 </ScrollView>
