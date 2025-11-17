@@ -6,67 +6,54 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="12dp"
-    app:cardElevation="4dp">
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/tvNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nome_do_ponto"
+            android:text="Nome do Ponto"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#2E7D32"/>
+            android:textColor="@color/green_dark"/>
 
         <TextView
             android:id="@+id/tvEndereco"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/endere_o"
+            android:text="Endereço"
             android:textSize="14sp"
-            android:layout_marginTop="4dp"/>
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="8dp"/>
 
         <TextView
             android:id="@+id/tvMateriais"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/materiais"
+            android:text="Materiais"
             android:textSize="12sp"
-            android:textColor="#666666"
-            android:layout_marginTop="4dp"/>
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp"/>
 
-        <LinearLayout
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeletar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="12dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnEditar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/editar"
-                android:layout_marginEnd="4dp"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:icon="@android:drawable/ic_menu_edit"/>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnDeletar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/deletar"
-                android:layout_marginStart="4dp"
-                android:backgroundTint="#D32F2F"
-                app:icon="@android:drawable/ic_menu_delete"/>
-
-        </LinearLayout>
+            android:text="Deletar"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:icon="@android:drawable/ic_menu_delete"
+            android:textColor="@color/red_error"
+            app:strokeColor="@color/red_error"
+            app:iconTint="@color/red_error"/>
 
     </LinearLayout>
 

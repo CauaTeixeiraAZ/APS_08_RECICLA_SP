@@ -6,12 +6,16 @@
         <item
             android:id="@+id/nav_mapa"
             android:icon="@android:drawable/ic_dialog_map"
-            android:title="Mapa"/>
+            android:iconTint="@color/green_dark"
+            android:title="Mapa"
+            android:titleCondensed="Mapa"/>
 
         <item
             android:id="@+id/nav_admin"
             android:icon="@android:drawable/ic_menu_manage"
+            android:iconTint="@color/green_dark"
             android:title="Painel Administrativo"
+            android:titleCondensed="Admin"
             android:visible="false"/>
 
     </group>
@@ -21,7 +25,9 @@
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@android:drawable/ic_lock_power_off"
-                android:title="Sair"/>
+                android:iconTint="@color/red_error"
+                android:title="Sair"
+                android:titleCondensed="Sair"/>
         </menu>
     </item>
 

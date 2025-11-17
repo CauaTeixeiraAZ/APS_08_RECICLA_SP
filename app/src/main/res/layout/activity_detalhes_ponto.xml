@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="#F5F5F5">
+    android:background="@color/gray_light">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,17 +12,18 @@
         android:orientation="vertical">
 
         <!-- Mini Mapa -->
-        <androidx.fragment.app.FragmentContainerView
+        <fragment
             android:id="@+id/mapaMini"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="200dp" />
+            android:layout_height="250dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="16dp"
+            android:background="@color/white">
 
             <TextView
                 android:id="@+id/tvNome"
@@ -31,7 +32,7 @@
                 android:text="Nome do Ponto"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="#2E7D32"/>
+                android:textColor="@color/green_dark"/>
 
             <TextView
                 android:id="@+id/tvEndereco"
@@ -39,9 +40,9 @@
                 android:layout_height="wrap_content"
                 android:text="Endereço"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"
-                android:drawablePadding="8dp"
-                app:drawableStartCompat="@android:drawable/ic_dialog_map" />
+                android:textColor="@color/text_primary"
+                android:layout_marginTop="12dp"
+                android:drawablePadding="8dp"/>
 
             <TextView
                 android:id="@+id/tvTelefone"
@@ -49,10 +50,9 @@
                 android:layout_height="wrap_content"
                 android:text="Telefone"
                 android:textSize="16sp"
+                android:textColor="@color/text_primary"
                 android:layout_marginTop="8dp"
-                android:drawablePadding="8dp"
-                android:visibility="gone"
-                app:drawableStartCompat="@android:drawable/stat_sys_phone_call" />
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/tvHorario"
@@ -60,18 +60,21 @@
                 android:layout_height="wrap_content"
                 android:text="Horário"
                 android:textSize="16sp"
+                android:textColor="@color/text_primary"
                 android:layout_marginTop="8dp"
-                android:drawablePadding="8dp"
-                android:visibility="gone"
-                app:drawableStartCompat="@android:drawable/ic_menu_recent_history" />
+                android:visibility="gone"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnVerRota"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Ver Rota no Google Maps"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green_primary"
                 android:layout_marginTop="24dp"
                 app:icon="@android:drawable/ic_dialog_map"
+                app:iconTint="@color/white"
                 app:cornerRadius="8dp"/>
 
             <com.google.android.material.button.MaterialButton
@@ -79,8 +82,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Fechar"
+                android:textSize="16sp"
                 android:layout_marginTop="8dp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/green_primary"
+                android:textColor="@color/green_primary"
                 app:cornerRadius="8dp"/>
 
         </LinearLayout>

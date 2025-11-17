@@ -361,6 +361,10 @@ public class MapaCidadaoActivity extends AppCompatActivity
     }
 
     private void aplicarFiltrosEPesquisa() {
+        if (mMap == null) {
+            return;
+        }
+
         // Limpar mapa
         mMap.clear();
         markerPontoMap.clear();
@@ -369,13 +373,24 @@ public class MapaCidadaoActivity extends AppCompatActivity
         // Aplicar filtros e pesquisa
         int count = 0;
         for (PontoColeta ponto : todosPontos) {
+            // Verificar filtro de material
             boolean passaFiltro = filtroAtual.equals("todos") ||
-                    ponto.getTiposMateriais().contains(filtroAtual);
+                    (ponto.getTiposMateriais() != null &&
+                            ponto.getTiposMateriais().contains(filtroAtual));
 
-            boolean passaPesquisa = termoPesquisa.isEmpty() ||
-                    ponto.getNome().toLowerCase().contains(termoPesquisa) ||
-                    ponto.getEndereco().toLowerCase().contains(termoPesquisa);
+            // Verificar pesquisa (busca em nome E endereço)
+            boolean passaPesquisa = true;
+            if (!termoPesquisa.isEmpty()) {
+                String nomeMinusculo = ponto.getNome() != null ?
+                        ponto.getNome().toLowerCase() : "";
+                String enderecoMinusculo = ponto.getEndereco() != null ?
+                        ponto.getEndereco().toLowerCase() : "";
 
+                passaPesquisa = nomeMinusculo.contains(termoPesquisa) ||
+                        enderecoMinusculo.contains(termoPesquisa);
+            }
+
+            // Adicionar ponto se passar nos dois critérios
             if (passaFiltro && passaPesquisa) {
                 pontosFiltrados.add(ponto);
                 adicionarMarcador(ponto);
@@ -383,13 +398,16 @@ public class MapaCidadaoActivity extends AppCompatActivity
             }
         }
 
-        Log.d(TAG, "Filtro: " + filtroAtual + ", Pesquisa: '" + termoPesquisa +
-                "', Resultados: " + count);
+        Log.d(TAG, "Filtro: '" + filtroAtual + "', Pesquisa: '" + termoPesquisa +
+                "', Resultados: " + count + "/" + todosPontos.size());
 
-        if (count == 0 && !todosPontos.isEmpty()) {
-            Toast.makeText(this, "Nenhum ponto encontrado", Toast.LENGTH_SHORT).show();
-        } else if (count > 0) {
-            Toast.makeText(this, count + " pontos encontrados", Toast.LENGTH_SHORT).show();
+        // Feedback para o usuário
+        if (!termoPesquisa.isEmpty() || !filtroAtual.equals("todos")) {
+            if (count == 0) {
+                Toast.makeText(this, "Nenhum ponto encontrado", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, count + " ponto(s) encontrado(s)", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

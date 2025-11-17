@@ -6,13 +6,15 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="12dp"
-    app:cardElevation="4dp">
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:background="@color/white">
 
         <TextView
             android:id="@+id/tvNome"
@@ -21,7 +23,7 @@
             android:text="Nome do Ponto"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:textColor="#2E7D32"/>
+            android:textColor="@color/green_dark"/>
 
         <TextView
             android:id="@+id/tvEndereco"
@@ -29,7 +31,8 @@
             android:layout_height="wrap_content"
             android:text="Endereço"
             android:textSize="14sp"
-            android:layout_marginTop="4dp"/>
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="8dp"/>
 
         <TextView
             android:id="@+id/tvMateriais"
@@ -37,33 +40,39 @@
             android:layout_height="wrap_content"
             android:text="Materiais"
             android:textSize="12sp"
-            android:textColor="#666666"
-            android:layout_marginTop="4dp"/>
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="12dp">
+            android:layout_marginTop="16dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnValidar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/validar"
+                android:text="Validar"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/green_primary"
                 android:layout_marginEnd="4dp"
-                app:icon="@android:drawable/ic_menu_send"/>
+                app:icon="@android:drawable/ic_menu_send"
+                app:iconTint="@color/white"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnRejeitar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/rejeitar"
+                android:text="Rejeitar"
+                android:textColor="@color/red_error"
                 android:layout_marginStart="4dp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                app:icon="@android:drawable/ic_menu_close_clear_cancel"/>
+                app:strokeColor="@color/red_error"
+                app:icon="@android:drawable/ic_menu_close_clear_cancel"
+                app:iconTint="@color/red_error"/>
 
         </LinearLayout>
 
